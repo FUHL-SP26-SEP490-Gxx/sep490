@@ -39,7 +39,7 @@ app.use(express.json());
 
 // --- Sample Route ---
 app.get("/", (req, res) => {
-  res.json({ message: "Server is running..." });
+  res.json({ message: "Server for SEP490 Capstone Project is running" });
 });
 
 // --- Start Server ---
