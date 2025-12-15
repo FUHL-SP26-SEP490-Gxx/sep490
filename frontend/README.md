@@ -43,7 +43,7 @@ npm run dev
 
 ## Danh sách thư viện sử dụng
 
-Dựa trên `package.json`, dưới đây là các thư viện chính và công dụng của chúng trong dự án:
+Dựa trên `package.json`, dưới đây là các thư viện chính và công dụng của chúng trong dự án, danh sách thư viện có thể sẽ được cập nhật trong quá trình làm dự án:
 
 ### Core & Build Tool
 - **`react`** (^19.2.0) & **`react-dom`**: Thư viện cốt lõi để xây dựng giao diện người dùng.
