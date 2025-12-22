@@ -65,3 +65,7 @@ Dựa trên `package.json`, dưới đây là các thư viện chính và công 
 - **`jest`** (^30.2.0): Framework kiểm thử (Unit Test/Integration Test) phổ biến cho JavaScript.
 - **`supertest`** (^7.1.4): Thư viện hỗ trợ test HTTP request cho Express (thường dùng chung với Jest).
 - **`cross-env`** (^10.1.0): Hỗ trợ thiết lập biến môi trường (như `NODE_ENV`) đồng nhất trên các hệ điều hành khác nhau (Windows/Linux/Mac).
+
+### Documentation (Tài liệu API)
+- **`swagger-ui-express`**: Middleware tạo giao diện người dùng (UI) để hiển thị và tương tác với tài liệu API. 
+- **`swagger-jsdoc`**: Giúp viết tài liệu API ngay trong code bằng JSDoc comments và tự động tạo đặc tả OpenAPI.
