@@ -2,6 +2,8 @@
 import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
+import swaggerUi from "swagger-ui-express";
+import swaggerSpec from "./config/swagger.js";
 import { createServer } from "http";
 import { initSocket } from "./config/socket.js";
 
@@ -42,14 +44,13 @@ app.get("/", (req, res) => {
   res.json({ message: "Server for SEP490 Capstone Project is running - Test" });
 });
 
+// --- API Documentation ---
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+
 // --- Start Server ---
 const PORT = process.env.PORT;
 
-httpServer.listen(PORT, () =>
-  console.log(`🚀 Server running on http://localhost:${PORT}`)
-);
-
-
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+httpServer.listen(PORT, () =>{
+  console.log(`Server running on http://localhost:${PORT}`);
+  console.log(`Swagger UI at http://localhost:${PORT}/api-docs`);
 });
