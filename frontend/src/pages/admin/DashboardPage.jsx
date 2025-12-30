@@ -25,7 +25,7 @@ const DashboardPage = () => {
 
   return (
     <MainLayout title="Dashboard">
-      {/* NOT REMOVE - Đây là nơi bạn có thể thêm nội dung ở phần bên phải */}
+      {/* NOT REMOVE THIS NOTE - Đây là nơi bạn có thể thêm nội dung ở phần bên phải */}
       <h2>Đây là trang sử dụng font Sans Francisco</h2>
       <p>Welcome to the dashboard page.</p>
       {/* Hiển thị message từ API */}
@@ -36,7 +36,7 @@ const DashboardPage = () => {
         ) : (
           <>
             <p>
-              <strong>API message:</strong> {message}
+              <strong>API message:</strong> <code>{message}</code>
             </p>
             {success && (
               <p
@@ -48,7 +48,7 @@ const DashboardPage = () => {
                   marginTop: "8px",
                 }}
               >
-                {success}
+                <code>{success}</code>
               </p>
             )}
           </>

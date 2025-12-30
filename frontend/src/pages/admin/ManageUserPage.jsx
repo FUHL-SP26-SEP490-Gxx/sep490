@@ -4,7 +4,7 @@ import MainLayout from "../../components/layout/Layout";
 const ManageUserPage = () => {
   return (
     <MainLayout title="Quản lý người dùng">
-      {/* NOT REMOVE - Đây là nơi bạn có thể thêm nội dung ở phần bên phải */}
+      {/* NOT REMOVE THIS NOTE - Đây là nơi bạn có thể thêm nội dung ở phần bên phải */}
       <h2>Đây là trang sử dụng font Sans Francisco</h2>
       <p>Welcome to the dashboard page.</p>
       <p>
