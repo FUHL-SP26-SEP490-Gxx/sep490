@@ -21,7 +21,7 @@
 ## II. Công nghệ sử dụng
 
 ### 1. Frontend
-- **Library:** ReactJS
+- **Library:** ReactJS + Vite
 - **UI Framework:** Ant Design
 - **State Management:** React Hooks (useState, useEffect)
 
@@ -53,7 +53,7 @@
 #### Frontend
 1. Di chuyển vào thư mục frontend: `cd frontend`
 2. Cài đặt dependencies: `npm install`
-3. Chạy ứng dụng: `npm start`
+3. Chạy ứng dụng: `npm run dev`
 
 ## IV. Chức năng chính
 - **Dashboard:** Xem thống kê và thông báo từ hệ thống.
