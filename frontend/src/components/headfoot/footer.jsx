@@ -12,49 +12,114 @@ const { Title, Text, Link } = Typography;
 
 const CustomerFooter = () => {
   return (
-    <Footer style={{ background: "#001529", color: "#fff", padding: "48px 24px" }}>
+    <Footer style={{ background: "#3E2723", color: "#F5DEB3", padding: "48px 24px" }}>
       <Row gutter={[32, 32]}>
-        {/* Brand */}
+        {/* About Us */}
         <Col xs={24} md={8}>
-          <Title level={4} style={{ color: "#fff", marginBottom: 16 }}>
-            MyShop
+          <Title
+            level={4}
+            style={{
+              color: "#FFA500",
+              marginBottom: 16,
+              fontSize: 18,
+              fontWeight: 700,
+            }}
+          >
+            ☕ About Us
           </Title>
-          <Text style={{ color: "#ccc" }}>
-            Nền tảng mua sắm trực tuyến cung cấp các sản phẩm chất lượng,
-            giá cả hợp lý và dịch vụ uy tín.
+          <Text style={{ color: "#F5DEB3", lineHeight: 1.6 }}>
+            Premium coffee and pastries crafted with passion. We bring the warmth
+            and comfort of a cozy café to your doorstep.
           </Text>
         </Col>
 
-        {/* Links */}
+        {/* Quick Links */}
         <Col xs={24} md={8}>
-          <Title level={5} style={{ color: "#fff" }}>
+          <Title level={5} style={{ color: "#FFA500", fontSize: 16, fontWeight: 700 }}>
             Quick Links
           </Title>
-          <Space direction="vertical">
-            <Link href="/" style={{ color: "#ccc" }}>Home</Link>
-            <Link href="/products" style={{ color: "#ccc" }}>Products</Link>
-            <Link href="/about" style={{ color: "#ccc" }}>About Us</Link>
-            <Link href="/contact" style={{ color: "#ccc" }}>Contact</Link>
+          <Space direction="vertical" style={{ display: "flex", gap: "12px" }}>
+            <Link
+              href="/"
+              style={{ color: "#F5DEB3", transition: "color 0.3s ease" }}
+              onMouseEnter={(e) => (e.target.style.color = "#10B981")}
+              onMouseLeave={(e) => (e.target.style.color = "#F5DEB3")}
+            >
+              Home
+            </Link>
+            <Link
+              href="/products"
+              style={{ color: "#F5DEB3", transition: "color 0.3s ease" }}
+              onMouseEnter={(e) => (e.target.style.color = "#10B981")}
+              onMouseLeave={(e) => (e.target.style.color = "#F5DEB3")}
+            >
+              Products
+            </Link>
+            <Link
+              href="/about"
+              style={{ color: "#F5DEB3", transition: "color 0.3s ease" }}
+              onMouseEnter={(e) => (e.target.style.color = "#10B981")}
+              onMouseLeave={(e) => (e.target.style.color = "#F5DEB3")}
+            >
+              About Us
+            </Link>
+            <Link
+              href="/contact"
+              style={{ color: "#F5DEB3", transition: "color 0.3s ease" }}
+              onMouseEnter={(e) => (e.target.style.color = "#10B981")}
+              onMouseLeave={(e) => (e.target.style.color = "#F5DEB3")}
+            >
+              Contact
+            </Link>
           </Space>
         </Col>
 
-        {/* Contact */}
+        {/* Social Media */}
         <Col xs={24} md={8}>
-          <Title level={5} style={{ color: "#fff" }}>
-            Contact
+          <Title level={5} style={{ color: "#FFA500", fontSize: 16, fontWeight: 700 }}>
+            Contact & Follow
           </Title>
-          <Space direction="vertical" style={{ color: "#ccc" }}>
-            <Text style={{ color: "#ccc" }}>
-              <PhoneOutlined /> 0123 456 789
+          <Space direction="vertical" style={{ display: "flex", gap: "12px" }}>
+            <Text style={{ color: "#F5DEB3" }}>
+              <PhoneOutlined style={{ color: "#10B981", marginRight: 8 }} /> 0123
+              456 789
             </Text>
-            <Text style={{ color: "#ccc" }}>
-              <MailOutlined /> support@myshop.com
+            <Text style={{ color: "#F5DEB3" }}>
+              <MailOutlined style={{ color: "#10B981", marginRight: 8 }} />{" "}
+              support@myshop.com
             </Text>
 
-            <Space size="middle">
-              <FacebookOutlined style={{ fontSize: 20 }} />
-              <InstagramOutlined style={{ fontSize: 20 }} />
-              <YoutubeOutlined style={{ fontSize: 20 }} />
+            <Space size="large" style={{ marginTop: 8 }}>
+              <FacebookOutlined
+                style={{
+                  fontSize: 20,
+                  color: "#F5DEB3",
+                  cursor: "pointer",
+                  transition: "color 0.3s ease",
+                }}
+                onMouseEnter={(e) => (e.target.style.color = "#10B981")}
+                onMouseLeave={(e) => (e.target.style.color = "#F5DEB3")}
+              />
+              <InstagramOutlined
+                style={{
+                  fontSize: 20,
+                  color: "#F5DEB3",
+                  cursor: "pointer",
+                  transition: "color 0.3s ease",
+                }}
+                onMouseEnter={(e) => (e.target.style.color = "#10B981")}
+                onMouseLeave={(e) => (e.target.style.color = "#F5DEB3")}
+              />
+              <YoutubeOutlined
+                style={{
+                  fontSize: 20,
+                  color: "#F5DEB3",
+                  cursor: "pointer",
+                  transition: "color 0.3s ease",
+                }}
+                onMouseEnter={(e) => (e.target.style.color = "#10B981")}
+                onMouseLeave={(e) => (e.target.style.color = "#F5DEB3")}
+              />
             </Space>
           </Space>
         </Col>
@@ -64,13 +129,15 @@ const CustomerFooter = () => {
       <div
         style={{
           marginTop: 32,
-          borderTop: "1px solid rgba(255,255,255,0.15)",
+          borderTop: "1px solid rgba(245, 222, 179, 0.2)",
           paddingTop: 16,
           textAlign: "center",
-          color: "#aaa",
+          color: "#D4A574",
+          fontSize: 13,
         }}
       >
-        © {new Date().getFullYear()} MyShop. All rights reserved. Created by SEP490
+        © {new Date().getFullYear()} MyShop Coffee. All rights reserved. ☕ Created
+        with passion
       </div>
     </Footer>
   );

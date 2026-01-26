@@ -23,21 +23,31 @@ const MainLayout = ({ children, title }) => {
       <Layout>
         <Header
           style={{
-            background: "#fff",
-            padding: "0 16px",
+            background: "#3E2723",
+            padding: "0 24px",
             display: "flex",
             alignItems: "center",
             gap: 16,
+            boxShadow: "0 2px 8px rgba(0, 0, 0, 0.15)",
           }}
         >
           <Button
             type="text"
-            icon={<MenuOutlined />}
+            icon={<MenuOutlined style={{ color: "#FFA500", fontSize: 20 }} />}
             onClick={() => setCollapsed(!collapsed)}
+            style={{
+              transition: "all 0.3s ease",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.querySelector("span").style.color = "#10B981";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.querySelector("span").style.color = "#FFA500";
+            }}
           />
 
-          {/* Title động */}
-          <Title level={4} style={{ margin: 0 }}>
+          {/* Title */}
+          <Title level={4} style={{ margin: 0, color: "#F5DEB3", fontWeight: 700 }}>
             {title}
           </Title>
         </Header>
@@ -46,7 +56,9 @@ const MainLayout = ({ children, title }) => {
           style={{
             margin: 16,
             padding: 24,
-            background: "#fff",
+            background: "#F9F5F0",
+            borderRadius: "8px",
+            boxShadow: "0 1px 4px rgba(62, 39, 35, 0.1)",
           }}
         >
           {children}
