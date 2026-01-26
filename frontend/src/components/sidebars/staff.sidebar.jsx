@@ -1,3 +1,5 @@
+'use client';
+
 import { Layout, Menu, Drawer, Grid } from "antd";
 import {
   DashboardOutlined,
@@ -28,10 +30,25 @@ const StaffSidebar = ({ collapsed, onCloseMobile }) => {
       mode="inline"
       items={items}
       selectedKeys={[location.pathname]}
-      style={{ borderRight: 0 }}
+      style={{
+        borderRight: 0,
+        backgroundColor: "#3E2723",
+        color: "#F5DEB3",
+      }}
+      itemLabelRender={(label) => (
+        <span style={{ color: "#F5DEB3", fontWeight: 500 }}>{label}</span>
+      )}
       onClick={({ key }) => {
         navigate(key);
         if (isMobile) onCloseMobile?.();
+      }}
+      itemSelectedStyle={{
+        backgroundColor: "#10B981 !important",
+        color: "#fff !important",
+      }}
+      itemHoverStyle={{
+        backgroundColor: "#10B981 !important",
+        color: "#fff !important",
       }}
     />
   );
@@ -44,7 +61,10 @@ const StaffSidebar = ({ collapsed, onCloseMobile }) => {
         open={!collapsed}
         closable={false}
         width={240}
-        bodyStyle={{ padding: 0 }}
+        bodyStyle={{ padding: 0, backgroundColor: "#3E2723" }}
+        styles={{
+          header: { backgroundColor: "#3E2723", borderBottom: "2px solid #10B981" },
+        }}
         onClose={onCloseMobile}
       >
         {/* Header Drawer */}
@@ -56,11 +76,13 @@ const StaffSidebar = ({ collapsed, onCloseMobile }) => {
             padding: "0 16px",
             fontWeight: 600,
             fontSize: 18,
-            background: "#001529",
-            color: "#fff",
+            background: "#3E2723",
+            color: "#FFA500",
+            borderBottom: "2px solid #10B981",
+            letterSpacing: "0.5px",
           }}
         >
-          My App
+          ☕ Admin Panel
         </div>
 
         {menu}
@@ -75,6 +97,7 @@ const StaffSidebar = ({ collapsed, onCloseMobile }) => {
       collapsed={collapsed}
       width={240}
       trigger={null}
+      style={{ backgroundColor: "#3E2723" }}
     >
       {/* Logo / Brand */}
       <div
@@ -84,13 +107,16 @@ const StaffSidebar = ({ collapsed, onCloseMobile }) => {
           alignItems: "center",
           justifyContent: collapsed ? "center" : "flex-start",
           paddingLeft: collapsed ? 0 : 16,
-          fontWeight: 600,
+          fontWeight: 700,
           fontSize: 18,
-          color: "#fff",
-          transition: "all 0.2s",
+          color: "#FFA500",
+          transition: "all 0.2s ease",
+          backgroundColor: "#3E2723",
+          borderBottom: "2px solid #10B981",
+          letterSpacing: "0.5px",
         }}
       >
-        {collapsed ? "A (S)" : "My App (Staff)"}
+        {collapsed ? "☕" : "☕ Admin Panel"}
       </div>
 
       {menu}
