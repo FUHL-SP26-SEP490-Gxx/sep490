@@ -48,7 +48,7 @@ app.use(express.json());
 // --- Sample Route ---
 app.get("/", (req, res) => {
   res.json({
-    message: "Server for SEP490 Capstone Project (branch: feature/test) is running",
+    message: "Server for SEP490 Capstone Project (branch: develop) is running",
     success: "Connected API successfully",
   });
 });
